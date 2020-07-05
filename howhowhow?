@@ -1,0 +1,67 @@
+package TugasUpscale;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+import javax.sound.sampled.SourceDataLine;
+
+public class Upscale {
+    public static void main (String[] args) throws IOException {
+
+        Scanner pasienInput = new Scanner(System.in);
+        String pilihanUser;
+        boolean isLanjutkan = true;
+
+        while (isLanjutkan) {
+
+            System.out.println("MAIN MENU \n========");
+            System.out.println("[A]dd Name Entry");
+            System.out.println("[D]isplay All Entries");
+
+            System.out.print("\nYour Input: ");
+            pilihanUser = pasienInput.next();
+            
+            switch (pilihanUser){
+                
+                case "A":
+                
+                    String nama, alamat;
+                    int tempt, sleephours;
+                    
+                    Scanner keyboard = new Scanner(System.in);
+
+                    System.out.println("==Please Input Your Data==");
+                    System.out.print("Nama: ");
+                    nama = keyboard.nextLine();
+                    System.out.print("Alamat: ");
+                    alamat = keyboard.nextLine();
+                    System.out.print("Temp (°C): ");
+                    tempt = keyboard.nextInt();
+                    System.out.print("Sleep Hours: ");
+                    sleephours = keyboard.nextInt();
+
+                    System.out.println("======");
+                    System.out.println("Nama: " + nama);
+                    System.out.println("Alamat: " + alamat);
+                    System.out.println("Temp (°C): " + tempt + "°C");
+                    System.out.println("Sleep Hours: " + sleephours + "Hours");
+                    if (sleephours>=8) {
+                        System.out.print("\t===You Are Fit to Work===");
+                    } else {
+                        System.out.print("\t===You Are Not Fit to Work===");
+                    }
+                                                       
+                    
+                                        
+                case "D":
+            }
+            System.out.println("\n[B]ack To Menu");
+            System.out.print("\nYour Input: ");
+            pilihanUser = pasienInput.next();
+
+            isLanjutkan = pilihanUser.equalsIgnoreCase("B");
+        }
+    }
+    private static void tampilkanData() throws IOException{}
+}
+
